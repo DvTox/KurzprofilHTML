@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap');
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+:root{
+    --main-color: orange;
+    --h2-line-color: lightgray;
+}
+
+/*--------------*/
+/*- Components -*/
+/*--------------*/
+
+/*------*/
+/*- H1 -*/
+/*------*/
+
+h1{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+
+    width: 80%; 
+    text-align: center; 
+    color: var(--main-color);
+    border-bottom: 1px solid var(--main-color); 
+    line-height: 0.1em;
+    /* margin: 10px 0 20px;  */
+    margin-top: .75em;
+    margin-bottom: 1.5em;
+}
+
+h1 span{
+    background:#fff; 
+    padding:0 10px; 
+}
+
+
+/*------*/
+/*- H2 -*/
+/*------*/
+
+h2{
+    position: relative;
+    color: var(--main-color);
+    text-align: center;
+}
+
+h2::before, h2::after{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+
+    background-color: var(--h2-line-color);
+    content: '';
+    display: block;
+    height: 3px;
+    width: 80%;
+    margin-bottom: 5px;
+}
+
+/*------*/
+/*- subHeader -*/
+/*------*/
+.subHeader{
+    position: relative;
+    margin-top: 1.5em;
+}
+
+.subHeader{
+    position: relative;
+    right: 60%;
+    font-weight: bold;
+    font-size: .75em;
+
+    text-align: right;
+    color: var(--main-color);
+}
+
+.subHeader::after{
+    position: absolute;
+    content: '';
+    background-color: var(--main-color);
+
+    display: block;
+    /* width: 130%; */
+    width: 30%;
+    height: 3px;
+    right: 0;
+}
+
+
+/*------------*/
+/*- Sections -*/
+/*------------*/
+
+/*---------------*/
+/*- contactInfo -*/
+/*---------------*/
+
+.contactInfo{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: 80%;
+    margin: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.contactInfo > p{
+    margin-left: 1em;
+    margin-bottom: .5em;
+}
+
+.profilePic{
+    grid-column: span 2;
+    grid-row: span 5;
+}
+
+.profilePic img{
+    object-fit: cover;
+    max-width: 100%;
+    /* width: 15em; */
+    /* height: auto; */
+    border: 2px solid black;
+
+    /* -webkit-box-shadow: 15px 15px 22px 0px rgba(0,0,0,0.57); 
+    box-shadow: 15px 15px 22px 0px rgba(0,0,0,0.57); */
+
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 0px 1px 13px 8px rgba(255,152,48,0); 
+    box-shadow: 0px 10px 13px -7px #000000, 0px 1px 13px 8px rgba(255,152,48,0);
+}
+
+.contactInfo > a > img{
+    width: 3em;
+}
+
+/*--------------*/
+/*- skillBlock -*/
+/*--------------*/
+
+.skillBlock{
+    position: relative;
+    width: 80%;
+    left:50%;
+    transform: translate(-50%);
+
+    margin: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.skillBlock :nth-child(1n){
+    text-align: left;
+}
+
+.skillBlock :nth-child(3n+2){
+    text-align: center;
+}
+
+.skillBlock :nth-child(3n){
+    text-align: right;
+}
+
+/* .skillBlock > *{
+    text-align: center;
+} */
+
+/*-----*/
+/*- P -*/
+/*-----*/
+
+.standaloneText{
+    margin-top: 1em;
+    position: relative;
+    left:50%;
+    transform: translate(-50%);
+    width: 45ch;
+}
+
+.gitQR img{
+    margin-top: 1.7em;
+    position: relative;
+    left:50%;
+    transform: translate(-50%);
+
+    width: 10em;
+    height: auto;
+}

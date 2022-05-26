@@ -1,0 +1,22 @@
+@media print {
+    body{
+        background-color: white;
+    }
+
+    .dinA4{
+        display: block;
+        /* position: absolute; */
+        top: 0;
+        left: 0;
+
+        width: auto;
+        height: auto;
+        
+        box-shadow: none;
+        -webkit-box-shadow:none;
+
+        transform: none;
+    }
+
+    .pagebreak { page-break-before: always; }
+}
